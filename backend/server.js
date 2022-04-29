@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cloudinary = require('cloudinary');
 
-dotenv.config({path: 'backend/config/config.env'});
+// dotenv.config({path: 'backend/config/config.env'});
+
 if (process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({ path: 'backend/config/config.env' })
 
 //call database
