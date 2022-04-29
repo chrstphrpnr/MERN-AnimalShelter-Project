@@ -58,10 +58,10 @@ exports.loginUser = async (req, res, next) => {
 
     const use = await User.findOne({ email }).select('+password status')
 
-    let useid = use.status;
-    console.log(useid)
+    let userstatus = use.status;
+    console.log(userstatus)
 
-    if (useid === status) {
+    if (userstatus === status) {
         return next(new ErrorHandler('Your Account is Inactive! Please Contact the Administrator.', 401));
     }
 
