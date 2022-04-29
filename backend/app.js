@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const bodyParser = require('body-parser')
 const path = require('path')
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
 
 if(process.env.NODE_ENV !== 'PRODUCTION')
