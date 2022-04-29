@@ -1,17 +1,15 @@
-const express = require('express');``
-const app = express(); 
-const errorMiddleware = require('./middlewares/errors');
+const express = require('express');
 const cookieParser = require('cookie-parser')
-const fileUpload = require('express-fileupload')
+const errorMiddleware = require('./middlewares/errors');
+const app = express(); 
 const bodyParser = require('body-parser')
 const path = require('path')
+const fileUpload = require('express-fileupload')
+
+
 const dotenv = require('dotenv');
-
-
-if(process.env.NODE_ENV !== 'PRODUCTION')
-    require('dotenv').config({ path: 'backend/config/config.env'})
-
-dotenv.config({path: 'backend/config/config.env'});
+if (process.env.NODE_ENV !== 'PRODUCTION') 
+    require('dotenv').config({ path: 'backend/config/config.env' })
 
 
 app.use(express.json());
