@@ -56,7 +56,9 @@ exports.loginUser = async (req, res, next) => {
     // Finding user in database
     const user = await User.findOne({ email }).select('+password status')
 
-    let useid = user.status;
+    const use = await User.findOne({ email }).select('+password status')
+
+    let useid = use.status;
     console.log(useid)
 
     if (useid === status) {
