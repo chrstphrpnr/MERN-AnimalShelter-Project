@@ -56,7 +56,7 @@ exports.loginUser = async (req, res, next) => {
     // Finding user in database
     const user = await User.findOne({ email }).select('+password')
 
-    const use = await User.findOne({ email }).select('+password status')
+    const use = await User.findOne({ email }).select('status')
 
     let userstatus = use.status;
     console.log(userstatus)
