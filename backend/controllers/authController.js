@@ -44,10 +44,6 @@ exports.loginUser = async (req, res, next) => {
     const { email, password } = req.body;
     const status = 'Inactive';
 
-
-
-
-
     // Checks if email and password is entered by User
     if (!email || !password) {
         return next(new ErrorHandler('Please enter email & password', 400))
